@@ -386,11 +386,11 @@ void show_viewer(void)
             yy += img.h;
         }
 
+        pageY -= pageDir * 10;
         if(pageY < 0) pageY = 0;
         if(pageY > yy - images[imagesSize-1].h) pageY = yy - images[imagesSize-1].h;
 
         SDL_RenderPresent(renderer);
-        pageY -= pageDir * 10;
         SDL_Delay(15);
     }
 }
